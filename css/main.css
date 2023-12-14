@@ -1,0 +1,229 @@
+body {
+  margin: 0;
+  font-family: "SUIT", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+/* 스크롤바 숨기기 */
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+/* header */
+header {
+  height: 70px;
+  width: 100vw;
+  display: flex;
+}
+
+header div {
+  /* position: absolute; */
+  position: relative;
+  /* width: 40px; */
+}
+
+header img {
+  position: relative;
+}
+
+header .main-logo {
+  left: 26px;
+  height: 60px;
+  margin-top: 12px;
+}
+header .main-logo .main-logo-gif {
+  height: 60px;
+}
+
+header .main-menubox {
+  margin-top: 32px;
+  position: absolute;
+  right: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.ground {
+  width: calc(100vw - 100px);
+  position: absolute;
+  top: 600px;
+  border-top: 1.5px #000 solid;
+  height: calc(100vh - 605px);
+  background-image: url(/images/ground.png);
+  background-size: 2000px;
+  background-repeat: no-repeat;
+}
+
+.all_section {
+}
+
+.view_section {
+  position: fixed;
+  display: inline;
+  top: 600px;
+  left: 50px;
+}
+
+.allmy-btn {
+  font-family: SUIT;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  display: inline-block;
+  height: 28px;
+  padding: 7.5px 0;
+  position: absolute;
+  transition: 0.2s;
+}
+.allmy-btn:hover {
+  border-bottom: 1.5px #222 solid;
+}
+.all-btn {
+  margin-top: -160px;
+}
+.my-btn {
+  margin-top: -110px;
+}
+
+/* hoirzontal scroll */
+/* hoirzontal scroll */
+
+.sticky-parent {
+  height: 3500px;
+  margin: 0 50px;
+}
+.sticky {
+  position: sticky;
+  top: 0px;
+  margin-left: 50px;
+  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.dim {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 0 80px;
+}
+.dim:hover {
+}
+
+.dim img {
+  /* width: 250px; */
+  height: 250px;
+  margin-top: 350px;
+}
+
+.dim a {
+  font-size: 16px;
+}
+.dim .building-height {
+  /* display: none; */
+  position: absolute;
+  top: 300px;
+  opacity: 0;
+  transform: translateY(20px); /* 초기에는 아래에서 위로 20px 이동 */
+  transition: 0.3s;
+}
+.horizontal {
+  display: flex;
+}
+.br {
+  outline: solid;
+}
+/* 
+@media (max-width: 620px) {
+  .dim {
+    display: block;
+    min-width: 100vw;
+    height: 100vh;
+  }
+} */
+
+p {
+  font-size: 10em;
+  text-align: center;
+}
+
+/* scroll text */
+.scroll-text {
+  position: fixed;
+  top: 200px;
+  width: 100px;
+  height: 20px;
+  color: #222;
+  background-color: #fff;
+
+  text-align: center;
+  margin-left: calc(50vw - 50px);
+
+  letter-spacing: 2.8px;
+  font-family: "SUIT";
+  font-weight: 500;
+  font-size: 20px;
+
+  animation: blinkAnimation 3.3s 2 forwards; /* 1초 간격으로  infinite무한 반복 */
+}
+
+@keyframes blinkAnimation {
+  0%,
+  100% {
+    opacity: 0; /* 처음과 마지막 keyframe에서 투명하게 설정 */
+  }
+  50% {
+    opacity: 1; /* 중간 keyframe에서 투명도를 최대로 설정하여 나타나는 효과 */
+  }
+}
+.main-mobile {
+  display: none;
+}
+/* 모바일 */
+
+@media (max-width: 500px) {
+  .header,
+  .ground,
+  #all_section,
+  #my_section,
+  .view_section,
+  .scroll-text {
+    display: none;
+  }
+  .main-mobile {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .mobile-tt {
+    width: 100px;
+    height: 100px;
+    display: block;
+  }
+  .mobile-text {
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: center;
+  }
+  .mobile-home {
+    font-size: 14px;
+    margin-top: 20px;
+    width: 120px;
+    text-align: center;
+  }
+}

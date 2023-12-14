@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- css초기화 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+
+    <!-- 폰트 suit -->
+    <link
+      href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/font.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/projectpage.css" />
+    <link rel="stylesheet" href="./css/project/project.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+
+    <script src="./js/constant/serverUrl.js"></script>
+    <script type="module" defer src="./js/popup.js"></script>
+    <script type="module" defer src="./js/project/ground.js"></script>
+    <script type="module" defer src="./js/project/index.js"></script>
+
+    <title>meettro</title>
+    <link rel="icon" href="favicon.png" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="m-logo">
+        <a href="./main.html">
+          <img src="./images/icon-m.png" class="m-logo-img" />
+        </a>
+      </div>
+      <div class="project-name">new project</div>
+      <div class="main-menubox">
+        <div class="menubox-menu menu-btn trigger-patterns">
+          <div class="trigger-patterns">
+            <img src="./images/icon-patterns.png" class="menu-btn-icon" /><span
+              class="menu-btn-text"
+              >patterns</span
+            >
+        </div>
+      </div>
+        <div class="menubox-menu menu-btn">
+          <div class="team-menu">
+            <img src="./images/icon-members.png" class="menu-btn-icon" /><span
+              class="menu-btn-text"
+              >members</span
+            > 
+        </div>
+      </div>
+    </header>
+
+    
+    <div class="modal modal-team hidden">
+      <div class="modal-content modal-content-team modal__content">
+        <div class="modal__top">
+          <div class="modal__title">
+            <img class="modal__icon" src="images/icon-M.png" />
+            <h3 class="modal__text">팀원 목록</h3>
+          </div>
+          <div class="modal__close close-button close-button-team">
+            <button class="btn-close"><img src="./images/icon-x.png"></button>
+          </div>
+        </div>
+        <!-- <span class="close-button close-button-team ">&times;</span>
+        <div class="title">팀원 목록</div> -->
+        <form>
+          <label for="email">새로운 팀원</label>
+          <input
+            type="text"
+            name="id"
+            placeholder="아이디 검색"
+            class="id-search input-plus"
+          />
+        </form>
+        <div id="teamList" class="team-list"></div>
+      </div>
+    </div>
+    <div class="modal modal-todo" id="todo_modal">
+      <div class="modal-content modal-content-todo  modal__content">
+        <div class="modal__top">
+          <div class="modal__title">
+            <img class="modal__icon" src="images/icon-M.png" />
+            <h3 class="modal__text">팀원 목록</h3>
+          </div>
+          <div class="modal__close close-button close-button-todo">
+            <button class="btn-close"><img src="./images/icon-x.png"></button>
+          </div>
+        </div>
+        <!-- <span class="close-button close-button-todo">&times;</span>
+        <div class="title">할 일 목록</div> -->
+        <form class="todo-form">
+          <div class="todo-box">
+            <label for="todo">새로운 할 일</label>
+            <input
+              type="text"
+              name="todo"
+              placeholder="할 일 추가"
+              class="todo-add input-plus"
+              id="todo-text"
+            />
+          </div>
+          <div class="time-box">
+            <label for="time">목표 시간</label>
+            <input
+              type="number"
+              name="time"
+              class="target-time"
+              max="24"
+              min="1"
+            /><span class="times">시간</span>
+            
+          </div>
+          <input type="button" name="추가" value="추가" class="add-button" />
+        </form>
+        
+        <!-- 할 일 목록-->
+        <div class="todo-list" id="todo-list">
+          <label>나의 할 일</label>
+        </div>
+      </div>
+    </div>
+    <!-- 패턴 -->
+    <div class="modal modal-patterns hidden">
+      <div class="modal-content modal-content-patterns modal__content">
+        <div class="modal__top__patterns">
+          <div class="modal__title">
+            <img class="modal__icon" src="images/icon-M.png" />
+            <h3 class="modal__text">팀원 패턴 설정</h3>
+          </div>
+          <div class="modal__close close-button close-button-patterns">
+            <button class="btn-close"><img src="./images/icon-x.png"></button>
+          </div>
+        </div>
+        <!-- <span class="close-button close-button-team ">&times;</span>
+        <div class="title">팀원 목록</div> -->
+        <div class="modal-patterns-inner">
+          <div class="patterns-block-box">
+            <label>예시 블럭 패턴</label>
+            <div>
+              <img class="patterns-sample" src="./images/patterns-sample1.png">
+            </div>
+          </div>
+          <div class="patterns-member-box">
+            <label>패턴 설정</label>
+            <div class="patterns-member-box-inner">
+              <div class="patterns-member">
+                <img class="patterns-member-img" src="./images/patterns1.png">
+                <span class="btn20">선택 가능</span>
+              </div>
+              <div class="patterns-member">
+                <img class="patterns-member-img" src="./images/patterns1.png">
+                <span class="btn20">선택 가능</span>
+              </div>
+              <div class="patterns-member">
+                <img class="patterns-member-img" src="./images/patterns1.png">
+                <span class="btn20">선택 가능</span>
+              </div>
+              <div class="patterns-member">
+                <img class="patterns-member-img" src="./images/patterns1.png">
+                <span class="btn20">선택 가능</span>
+              </div>
+              <div class="patterns-member">
+                <img class="patterns-member-img" src="./images/patterns1.png">
+                <span class="btn20">선택 가능</span>
+              </div>
+              <div class="patterns-member">
+                <img class="patterns-member-img" src="./images/patterns1.png">
+                <span class="btn20">선택 가능</span>
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+        <button class="btn-close btn60 btn-apply">적용하기</button>
+       
+      </div>
+    </div>
+    <div class="projectpage-sky">
+      <div class="profile-box">
+        <div class="profile project-profile-01">
+          <div class="profile-img-box">
+            <img id="m_profile" class="profile-img" />
+          </div>
+          <div class="profile-name">ME</div>
+        </div>
+      </div>
+      <img src="./images/tt-dontstop.gif" class="project-tt">
+      
+    </div>
+
+    <section class="land">
+      <!-- <div class="projectpage-ground"> -->
+      <div class="inner"></div>
+    </section>
+  </body>
+</html>

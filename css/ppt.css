@@ -1,0 +1,43 @@
+* {
+  font-family: "SUIT", sans-serif;
+  cursor: auto;
+}
+a {
+  text-decoration: none;
+}
+
+header {
+  margin-top: 30px;
+  height: 50px;
+}
+
+header .previous {
+  left: 30px;
+  position: relative;
+}
+
+header .previous-button {
+  width: 50px;
+}
+header .next {
+  left: 82%;
+  position: relative;
+}
+header .next-button {
+  width: 50px;
+}
+header .test-logo-ee-img {
+  width: 200px;
+  position: relative;
+  top: -5px;
+  left: calc(50vw - 160px);
+}
+.dp-img {
+  width: 100vw;
+}
+
+.logo-gif {
+  width: 800px;
+  display: block;
+  margin: 500px auto;
+}

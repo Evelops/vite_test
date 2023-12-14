@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- css초기화 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+
+    <!-- 폰트 suit -->
+    <link
+      href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css"
+      rel="stylesheet"
+    />
+
+    <!-- <link rel="stylesheet" href="./css/home.css" /> -->
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/font.css" />
+    <style>
+      /* tt */
+      .tt-info {
+        margin: 20px auto;
+        display: block;
+        width: 800px;
+        height: 500px;
+        color: #222;
+      }
+
+      .tt-info .tt-img {
+        width: 280px;
+        margin-top: 50px;
+      }
+      .tt-info .tt-text-box {
+        display: inline-block;
+      }
+      .tt-info .tt-text-box .tt-title-text {
+        color: #222;
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .tt-info .tt-text-box .tt-text {
+        color: #222;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 32px;
+      }
+
+      .tt-gif-box {
+        width: 100vw;
+
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+      }
+      .tt-gif-box img {
+        width: 240px;
+        border-bottom: 2px solid #222;
+      }
+
+      /* 모바일 */
+
+      @media (max-width: 500px) {
+        .tt-info {
+          margin: 10px auto;
+          display: flex;
+          width: 300px;
+          height: 300px;
+          color: #222;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 40px;
+        }
+
+        .tt-info .tt-img {
+          width: 240px;
+          height: 240px;
+          margin-top: 0;
+        }
+        .tt-info .tt-text-box {
+          display: inline-block;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .tt-info .tt-text-box .tt-title-text {
+          color: #222;
+          font-size: 24px;
+          font-weight: 700;
+          margin-bottom: 10px;
+        }
+
+        .tt-info .tt-text-box .tt-text {
+          color: #222;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22px;
+          text-align: center;
+        }
+
+        .tt-gif-box {
+          margin-top: 100px;
+          width: 100vw;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: flex-end;
+        }
+        .tt-gif-box img {
+          width: 70px;
+          border-bottom: 1.5px solid #222;
+        }
+      }
+    </style>
+    <!-- <script type="module" defer src=""></script>
+    <script type="module" defer src=""></script> -->
+    <!-- <script type="module" defer src="./js/share.js"></script> -->
+
+    <link rel="icon" href="favicon.png" />
+    <title>meettro</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html" class="previous">
+        <img src="./images/icon-left.png" class="previous-button" />
+        <img src="./images/logo-ee.png" class="previous-logo" />
+      </a>
+      <div class="header-title">tt</div>
+    </header>
+
+    <div class="tt-info">
+      <img class="tt-img" src="./images/tt-img.png" />
+      <div class="tt-text-box">
+        <div class="tt-title-text">티티</div>
+        <div class="tt-text">
+          meettro의 t 두 개가 만나 만들어진 마스코트.<br />
+          웹상에서 돌아다니며 사용자와 상호작용합니다.
+        </div>
+      </div>
+    </div>
+
+    <div class="tt-gif-box">
+      <img src="./images/tt-walking.gif" class="tt-gif-1" />
+      <img src="./images/tt-stopjump.gif" class="tt-gif-2" />
+      <img src="./images/tt-dancing.gif" class="tt-gif-3" />
+      <img src="./images/tt-side.gif" class="tt-gif-4" />
+      <img src="./images/tt-nike.gif" class="tt-gif-5" />
+    </div>
+
+    <!-- <img src="./images/logo+ee-full.gif" class="logo-gif" /> -->
+  </body>
+</html>
